@@ -1,0 +1,4 @@
+output
+packer-plugin-upcloud
+*.raw.gz
+*.raw
