@@ -16,6 +16,7 @@ $ packer build -var 'upcloud_zones=["fi-hel1", "fi-hel2"]' alpine.pkr.hcl
 Using defaults requires that `UPCLOUD_API_PASSWORD` and `UPCLOUD_API_USER` are provided using environment variables.  
 When deploying the server metadata service needs to enabled from UpCloud's control panel for image to work properly.  
 
+_Note that in a absence of KVM acceleration you need to increase wait times (`boot_wait` and inside `boot_command`) heavily._
 ## Deployment example
 
 Deploy image using Terraform and setup instance using `user_data`. This example assumes that template was created with name `alpine-3-15-amd64` and that it's available in `pl-waw1` zone.
